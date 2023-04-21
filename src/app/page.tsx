@@ -1,6 +1,16 @@
-import Image from 'next/image';
+import FeaturedPosts from './components/FeaturedPosts';
+import Profile from './components/Profile';
+import CarouselPosts from './components/CarouselPosts';
 
-export default function Home() {
-  return <main className='flex min-h-screen flex-col items-center justify-between'></main>;
+export default function HomePage() {
+  return (
+    <section>
+      <Profile />
+      {/* @ts-expect-error Async Server Component */}
+      <FeaturedPosts />
+      {/* @ts-expect-error Async Server Component */}
+      <CarouselPosts />
+    </section>
+  );
 }
 
