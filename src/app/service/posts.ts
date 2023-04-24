@@ -1,5 +1,6 @@
 import { readFile } from 'fs/promises';
 import path from 'path';
+import { Form } from '../components/ContactForm';
 
 export type Post = {
   title: string;
